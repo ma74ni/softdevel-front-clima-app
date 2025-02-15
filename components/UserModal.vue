@@ -19,6 +19,7 @@ const emit = defineEmits(["close"]);
             <div class="text-sm">
                 <p class="p-0 m-0">{{ user?.weather?.description }}</p>
                 <p class="p-0 m-0">Min: {{ user?.weather?.temp_min }} | Máx: {{ user?.weather?.temp_max }} </p>
+                <p class="p-0 m-0">{{ user.weather.countryName }}</p>
             </div>
             <div class="flex">
                 <p class="text-[30px] font-bold">{{ user?.weather?.temp }}</p>

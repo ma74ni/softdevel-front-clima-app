@@ -5,9 +5,9 @@ const users = ref([]);
 
 const fetchUsers = async () => {
   try {
-    /* const response = await fetch("http://localhost:8000/api/users");
-    users.value = await response.json(); */
-    users.value = [
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/users`);
+    users.value = await response.json();
+    /* users.value = [
   {
     "name": "Juan Perez",
     "latitude": 19.4326,
@@ -168,7 +168,7 @@ const fetchUsers = async () => {
       "countryName": "Sydney"
     }
   }
-]
+] */
   } catch (error) {
     console.error("Error al obtener usuarios:", error);
   }
